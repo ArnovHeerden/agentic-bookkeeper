@@ -35,4 +35,4 @@ See [SECURITY.md](SECURITY.md) for vulnerability disclosure.
 
 ## Author
 
-[Arno van Heerden](https://github.com/ArnovHeerden) — engineer behind [Axiomatics](https://axiomatics.co.za).
+[Arno van Heerden](https://github.com/ArnovHeerden) — AI Engineer behind [Axiomatics](https://axiomatics.co.za).
