@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Validate commit message against conventional-commits spec
+npx --no -- commitlint --edit "$1"

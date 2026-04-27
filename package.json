@@ -1,0 +1,91 @@
+{
+  "name": "agentic-bookkeeper",
+  "version": "0.1.0-alpha.1",
+  "description": "Agentic chart-of-accounts categorisation for bank transactions, powered by Claude. Production patterns: Zod-validated structured outputs, prompt caching, multi-provider abstraction, evaluation harness.",
+  "keywords": [
+    "agentic",
+    "ai",
+    "anthropic",
+    "claude",
+    "accounting",
+    "bookkeeping",
+    "categorisation",
+    "tool-use",
+    "structured-outputs",
+    "llm"
+  ],
+  "homepage": "https://github.com/ArnovHeerden/agentic-bookkeeper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnovHeerden/agentic-bookkeeper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArnovHeerden/agentic-bookkeeper/issues"
+  },
+  "license": "MIT",
+  "author": "Arno van Heerden",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "example": "tsx examples/run.ts",
+    "eval": "tsx evals/run-eval.ts",
+    "secrets:scan": "gitleaks detect --source . --no-git --verbose",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.1.5"
+  },
+  "lint-staged": {
+    "*.{ts,mjs,js}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

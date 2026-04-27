@@ -1,0 +1,21 @@
+# Gitleaks configuration — extends the default ruleset.
+# See https://github.com/gitleaks/gitleaks for the full list of built-in rules.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Allowlist for known-safe patterns"
+paths = [
+  '''.gitleaks.toml''',
+  '''.env.example''',
+  '''README.md''',
+  '''SECURITY.md''',
+  '''CHANGELOG.md''',
+]
+
+# Allow placeholder API keys in docs and examples
+regexes = [
+  '''sk-ant-\.\.\.''',
+  '''AIza\.\.\.''',
+]
