@@ -75,4 +75,4 @@ export {
 } from "./prompts/categorize-v1.js";
 
 // ── Library version ────────────────────────────────────────
-export const VERSION = "0.1.0-alpha.1";
+export const VERSION = "0.1.0";

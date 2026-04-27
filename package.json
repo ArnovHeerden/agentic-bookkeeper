@@ -1,6 +1,6 @@
 {
   "name": "agentic-bookkeeper",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0",
   "description": "Agentic chart-of-accounts categorisation for bank transactions, powered by Claude. Production patterns: Zod-validated structured outputs, prompt caching, multi-provider abstraction, evaluation harness.",
   "keywords": [
     "agentic",

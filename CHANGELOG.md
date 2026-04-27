@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-04-27
+
+Initial release. Extracted as a focused module from the production [Axiomatics](https://axiomatics.co.za) accounting platform to demonstrate production-grade agentic AI patterns.
+
 ### Added
 
 - Public API: `categorize()` agent function with Zod-validated input + output
@@ -23,4 +27,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CodeQL workflow + Dependabot configuration (minor/patch only — major bumps require manual review)
 - Documentation: full README, [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) with Mermaid diagrams, three ADRs covering Zod validation, provider abstraction, and prompt versioning
 
-[Unreleased]: https://github.com/ArnovHeerden/agentic-bookkeeper/compare/main...HEAD
+### Security
+
+- `gitleaks` scan clean across full git history (13 commits)
+- `trufflehog` filesystem scan clean (0 verified or unverified secrets)
+- GitHub Secret Scanning + Push Protection enabled at the repo level
+- 0 npm vulnerabilities in production or dev dependencies
+- Repository-level audit confirmed no production references (no `axiomatics-web` GCP project ID, no production API keys, no client names from production CRM)
+
+[Unreleased]: https://github.com/ArnovHeerden/agentic-bookkeeper/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/ArnovHeerden/agentic-bookkeeper/releases/tag/v0.1.0
