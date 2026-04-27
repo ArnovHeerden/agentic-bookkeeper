@@ -45,5 +45,11 @@ export default [
       eqeqeq: ["error", "always"],
     },
   },
+  {
+    files: ["examples/**/*.ts", "evals/**/*.ts"],
+    rules: {
+      "no-console": "off",
+    },
+  },
   prettier,
 ];

@@ -1,0 +1,147 @@
+{
+  "company": "Karoo Coffee Roasters (Pty) Ltd",
+  "currency": "ZAR",
+  "note": "Synthetic data for demonstration. Not real customers, not real bank accounts. Amounts in major currency units (rand), signed: negative = expense/payment, positive = income/receipt.",
+  "transactions": [
+    {
+      "id": "tx-01",
+      "date": "2026-03-01",
+      "description": "ABSA INTERNET — RENT MARCH",
+      "amount": -8500,
+      "reference": "RENT-2026-03"
+    },
+    {
+      "id": "tx-02",
+      "date": "2026-03-02",
+      "description": "MTN BUSINESS — FIBRE 100MBPS",
+      "amount": -1245,
+      "reference": "MTN-INV-99821"
+    },
+    {
+      "id": "tx-03",
+      "date": "2026-03-03",
+      "description": "ESKOM PREPAID R2800",
+      "amount": -2800,
+      "reference": "ESKOM-PRE-7733"
+    },
+    {
+      "id": "tx-04",
+      "date": "2026-03-05",
+      "description": "EFT CR STELLENBOSCH SPECIALTY FOODS INV-0001",
+      "amount": 18500,
+      "reference": "INV-0001"
+    },
+    {
+      "id": "tx-05",
+      "date": "2026-03-05",
+      "description": "ABSA MONTHLY ACCOUNT FEE",
+      "amount": -145,
+      "reference": "BANK-FEE-MAR"
+    },
+    {
+      "id": "tx-06",
+      "date": "2026-03-08",
+      "description": "ETHIOPIA COFFEE IMPORTERS — GREEN BEANS 80KG",
+      "amount": -15400,
+      "reference": "ECI-2284"
+    },
+    {
+      "id": "tx-07",
+      "date": "2026-03-10",
+      "description": "PAYROLL MARCH 2026 — 4 EMPLOYEES",
+      "amount": -68000,
+      "reference": "PAY-2026-03"
+    },
+    {
+      "id": "tx-08",
+      "date": "2026-03-12",
+      "description": "EFT CR CAPE TOWN COFFEE CO INV-0002",
+      "amount": 32400,
+      "reference": "INV-0002"
+    },
+    {
+      "id": "tx-09",
+      "date": "2026-03-15",
+      "description": "DISCOVERY HEALTH GROUP — STAFF MEDICAL",
+      "amount": -3200,
+      "reference": "DH-MAR"
+    },
+    {
+      "id": "tx-10",
+      "date": "2026-03-18",
+      "description": "TRANSFER FROM A VAN HEERDEN — ADDITIONAL CAPITAL",
+      "amount": 50000,
+      "reference": "DIR-LOAN-MAR"
+    },
+    {
+      "id": "tx-11",
+      "date": "2026-03-22",
+      "description": "SHELL ULTRA CITY BLOEMFONTEIN",
+      "amount": -3950,
+      "reference": "FUEL-2026-03-22"
+    },
+    {
+      "id": "tx-12",
+      "date": "2026-03-25",
+      "description": "NETSTAR VEHICLE TRACKING — APR",
+      "amount": -450,
+      "reference": "NS-APR"
+    },
+    {
+      "id": "tx-13",
+      "date": "2026-03-26",
+      "description": "SARS PAYE 0226 SETTLEMENT",
+      "amount": -12400,
+      "reference": "SARS-PAYE-0226"
+    },
+    {
+      "id": "tx-14",
+      "date": "2026-03-26",
+      "description": "SARS VAT 201 PERIOD 02/2026",
+      "amount": -8200,
+      "reference": "SARS-VAT-202602"
+    },
+    {
+      "id": "tx-15",
+      "date": "2026-03-28",
+      "description": "SAGE PASTEL — ANNUAL LICENCE RENEWAL",
+      "amount": -12500,
+      "reference": "SAGE-2026"
+    },
+    {
+      "id": "tx-16",
+      "date": "2026-03-30",
+      "description": "SANTAM INSURANCE — BUSINESS POLICY MARCH",
+      "amount": -4700,
+      "reference": "SAN-MAR"
+    },
+    {
+      "id": "tx-17",
+      "date": "2026-04-02",
+      "description": "DURBAN HILTON — INDABA COFFEE CONFERENCE",
+      "amount": -7800,
+      "reference": "INDABA-2026"
+    },
+    {
+      "id": "tx-18",
+      "date": "2026-04-05",
+      "description": "SARS PENALTY — VAT 201 LATE FILING",
+      "amount": -1200,
+      "reference": "SARS-PEN-MAR"
+    },
+    {
+      "id": "tx-19",
+      "date": "2026-04-08",
+      "description": "DONATION — KAROO HOSPICE NPO SECTION 18A",
+      "amount": -5000,
+      "reference": "DONATION-2026-04"
+    },
+    {
+      "id": "tx-20",
+      "date": "2026-04-12",
+      "description": "KAROO ENGINEERING — ESPRESSO ROASTER REPAIR",
+      "amount": -8400,
+      "reference": "KE-INV-1124"
+    }
+  ]
+}
