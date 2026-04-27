@@ -12,8 +12,10 @@ updates:
       prefix: chore
       include: scope
     ignore:
-      # @eslint/js v10 requires eslint v10; pinned to v9 to track the eslint major.
-      - dependency-name: "@eslint/js"
+      # Major bumps require manual review (peer-dep coordination, breaking
+      # changes). Dependabot still opens minor + patch PRs which auto-merge
+      # safely once CI is green.
+      - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     groups:
       dev-dependencies:
@@ -36,3 +38,6 @@ updates:
     commit-message:
       prefix: ci
       include: scope
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
