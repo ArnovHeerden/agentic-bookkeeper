@@ -9,9 +9,13 @@
 [![Node](https://img.shields.io/badge/node-%E2%89%A520-brightgreen)](package.json)
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen)](#testing)
 
-A small, focused TypeScript library that takes an ambiguous bank transaction — `"SHELL ULTRA CITY BLOEMFONTEIN, R3,950"` — and returns a Zod-validated chart-of-accounts categorisation: account code, confidence score, VAT applicability, and a one-sentence rationale. The reasoning engine is Claude with forced tool-use against a 140-account SA Pty Ltd Chart of Accounts.
+A small, focused TypeScript library that takes an ambiguous bank transaction — `"SHELL ULTRA CITY BLOEMFONTEIN, R3,950"` — and returns a Zod-validated chart-of-accounts categorisation: account code, confidence score, VAT applicability, and a one-sentence rationale. The reasoning engine is Claude with forced tool-use against a 141-account SA Pty Ltd Chart of Accounts.
 
 Extracted as a focused module from [Axiomatics](https://axiomatics.co.za) — a production agentic accounting platform — to demonstrate the patterns that distinguish a hobby LLM project from one a senior team would ship: structured outputs, prompt caching, retry classification, observability hooks, multi-provider abstraction, and an evaluation harness with measurable accuracy.
+
+## Why this exists
+
+Bank-transaction categorisation looks like a string-matching problem and isn't. The same merchant description (`"SHELL ULTRA CITY"`) can map to four different accounts depending on intent (employee fuel reimbursement vs. delivery vehicle vs. director's personal car claimed back), VAT status (standard-rated vs. exempt vs. non-VATable), and entity type (Pty Ltd shareholder loan vs. sole prop drawings). Production accounting systems can't just keyword-match — they need a model that reasons about IFRS rules, SARS classifications, and SA-specific bookkeeping conventions, then explains itself. This library is the agentic core of that reasoning, isolated and tested.
 
 ## What it looks like
 
@@ -197,6 +201,6 @@ MIT — see [LICENSE](LICENSE). Use it, fork it, learn from it, ship it.
 
 ## Author
 
-[**Arno van Heerden**](https://github.com/ArnovHeerden) — AI Engineer & Automation Specialist behind [Axiomatics](https://axiomatics.co.za), a production agentic accounting platform built solo (TypeScript, Next.js 16, Firebase, Anthropic Claude, OpenAI, Google Gemini).
+[**Arno van Heerden**](https://github.com/ArnovHeerden) — AI Engineer & Automation Specialist behind [Axiomatics](https://axiomatics.co.za), a production agentic accounting platform built solo on TypeScript, Next.js 16, Firebase, and Anthropic Claude as the primary LLM. The platform's multi-provider gateway also routes through OpenAI and Google Gemini; this library ships the Anthropic provider with the abstraction in place to add the others without touching the agent loop.
 
 Try the live demo: [axiomatics.co.za/demo](https://axiomatics.co.za/demo).

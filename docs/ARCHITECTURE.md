@@ -18,7 +18,7 @@ src/
 │   ├── types.ts          # LLMProvider interface + ProviderRequest/Response
 │   └── anthropic.ts      # AnthropicProvider — translates to/from SDK shape
 └── internal/
-    └── coa-sa-pty.ts     # 140-account SA Pty Ltd Chart of Accounts reference
+    └── coa-sa-pty.ts     # 141-account SA Pty Ltd Chart of Accounts reference
 ```
 
 ## The agent loop
@@ -94,7 +94,7 @@ Each call sends two static system blocks plus a per-call user message:
 ```mermaid
 flowchart LR
     A[System block 1<br/>~1650 words<br/>SA bookkeeping rules] -->|cache: true| C[Anthropic API]
-    B[System block 2<br/>~3500 tokens<br/>140-account CoA] -->|cache: true| C
+    B[System block 2<br/>~3500 tokens<br/>141-account CoA] -->|cache: true| C
     D[User message<br/>per-call<br/>transaction details] -->|cache: false| C
     C -->|tool_use| E[CategorizationResult]
 ```

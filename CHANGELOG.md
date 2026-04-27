@@ -15,7 +15,7 @@ Initial release. Extracted as a focused module from the production [Axiomatics](
 
 - Public API: `categorize()` agent function with Zod-validated input + output
 - `LLMProvider` interface and `AnthropicProvider` implementation with prompt-cache support (`cache_control: { type: "ephemeral" }`)
-- Versioned prompt artifact (`categorize-v1`) — cacheable system blocks for SA bookkeeping rules + 140-account CoA reference
+- Versioned prompt artifact (`categorize-v1`) — cacheable system blocks for SA bookkeeping rules + 141-account CoA reference
 - Production primitives: `Result<T, E>` discriminated union, `CategorizeError` with typed `kind` discriminator, retry with exponential backoff + full jitter, token-cost estimation per model
 - `Observer` interface for telemetry hooks (`onTokens`, `onCost`, `onAttempt`, `onError`) with safe-invoke wrapper
 - 70-test suite covering schemas, retry classification, cost math, observer contract, Anthropic SDK request/response shape, and full agent flow with mocked provider — runs offline in <200ms
