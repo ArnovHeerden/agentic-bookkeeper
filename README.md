@@ -2,6 +2,7 @@
 
 > Production-grade agentic Chart-of-Accounts categorisation for South African bank transactions, powered by Claude.
 
+[![npm version](https://img.shields.io/npm/v/agentic-bookkeeper.svg)](https://www.npmjs.com/package/agentic-bookkeeper)
 [![CI](https://github.com/ArnovHeerden/agentic-bookkeeper/actions/workflows/ci.yml/badge.svg)](https://github.com/ArnovHeerden/agentic-bookkeeper/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/ArnovHeerden/agentic-bookkeeper/actions/workflows/codeql.yml/badge.svg)](https://github.com/ArnovHeerden/agentic-bookkeeper/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -51,6 +52,10 @@ Summary
 The first transaction pays the cache_write premium for both system blocks (rules + accounts list). Every subsequent call pays the cache_read rate (~10% of full input). On a 20-transaction run that's roughly a 90% reduction in input cost.
 
 ## Quickstart
+
+```bash
+npm install agentic-bookkeeper
+```
 
 ```ts
 import { categorize, AnthropicProvider } from "agentic-bookkeeper";
