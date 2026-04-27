@@ -1,0 +1,174 @@
+{
+  "name": "SA Pty Ltd CoA categorisation — production-faithful eval set",
+  "version": "1.0.0",
+  "description": "Twenty-five labelled bank transactions designed to exercise the prompt's SA-specific reasoning rules: director loan vs share capital, Shell forecourts as fuel not travel, Section 18A donations as NON-VAT, SARS penalties as 6955 not 6990, municipal rates as VAT-exempt, etc. Each entry has a single primary expected code plus an acceptable-alternatives list for cases where multiple codes are defensibly correct.",
+  "synthetic": true,
+  "currency": "ZAR",
+  "entries": [
+    {
+      "id": "ev-01",
+      "transaction": { "description": "ABSA INTERNET — RENT MARCH 2026", "amount": -8500 },
+      "expected": { "primary": "6200", "acceptable": ["6200"] },
+      "rationale": "Routine rent payment — single canonical answer."
+    },
+    {
+      "id": "ev-02",
+      "transaction": { "description": "MTN BUSINESS FIBRE 100MBPS", "amount": -1245 },
+      "expected": { "primary": "6330", "acceptable": ["6330"] },
+      "rationale": "Internet connectivity — Internet & Telephone."
+    },
+    {
+      "id": "ev-03",
+      "transaction": { "description": "ESKOM PREPAID R2800", "amount": -2800 },
+      "expected": { "primary": "6310", "acceptable": ["6310"] },
+      "rationale": "Eskom = electricity utility."
+    },
+    {
+      "id": "ev-04",
+      "transaction": {
+        "description": "EFT CR STELLENBOSCH SPECIALTY FOODS INV-0001",
+        "amount": 18500
+      },
+      "expected": { "primary": "4110", "acceptable": ["4110", "4120", "4130"] },
+      "rationale": "Customer payment for an invoice — Sales Revenue family. Primary is Product Sales since it's a coffee roaster."
+    },
+    {
+      "id": "ev-05",
+      "transaction": { "description": "ABSA MONTHLY ACCOUNT FEE", "amount": -145 },
+      "expected": { "primary": "6950", "acceptable": ["6950"] },
+      "rationale": "Bank service fee — Bank Charges & Fees, VAT-exempt per SA rules."
+    },
+    {
+      "id": "ev-06",
+      "transaction": {
+        "description": "TRANSFER FROM A VAN HEERDEN — ADDITIONAL CAPITAL",
+        "amount": 50000
+      },
+      "expected": { "primary": "2260", "acceptable": ["2260"] },
+      "rationale": "Director funds into the business = Shareholder's Loan, NOT Share Capital. The prompt explicitly addresses this — picking 3100 here would mean the agent misread an SA Pty Ltd convention."
+    },
+    {
+      "id": "ev-07",
+      "transaction": { "description": "SHELL ULTRA CITY BLOEMFONTEIN", "amount": -3950 },
+      "expected": { "primary": "6920", "acceptable": ["6920"] },
+      "rationale": "Shell forecourt = vehicle fuel. Prompt says prefer 6920 over generic 6900 (Travel & Entertainment)."
+    },
+    {
+      "id": "ev-08",
+      "transaction": { "description": "NETSTAR VEHICLE TRACKING APR", "amount": -450 },
+      "expected": { "primary": "6910", "acceptable": ["6910"] },
+      "rationale": "Vehicle tracker subscription — Motor Vehicle Expenses, not Software."
+    },
+    {
+      "id": "ev-09",
+      "transaction": { "description": "SARS PAYE 0226 SETTLEMENT", "amount": -12400 },
+      "expected": { "primary": "2160", "acceptable": ["2160"] },
+      "rationale": "Settling employee tax liability — debits PAYE Payable, the liability account being cleared."
+    },
+    {
+      "id": "ev-10",
+      "transaction": { "description": "SARS VAT 201 PERIOD 02/2026", "amount": -8200 },
+      "expected": { "primary": "2150", "acceptable": ["2150"] },
+      "rationale": "VAT settlement — clears VAT Output liability."
+    },
+    {
+      "id": "ev-11",
+      "transaction": { "description": "SAGE PASTEL — ANNUAL LICENCE RENEWAL", "amount": -12500 },
+      "expected": { "primary": "6850", "acceptable": ["6850"] },
+      "rationale": "Accounting software — Software & Subscriptions per prompt example list."
+    },
+    {
+      "id": "ev-12",
+      "transaction": { "description": "SANTAM INSURANCE — BUSINESS POLICY MARCH", "amount": -4700 },
+      "expected": { "primary": "6500", "acceptable": ["6500"] },
+      "rationale": "Insurance premium — VAT-exempt per SA rules."
+    },
+    {
+      "id": "ev-13",
+      "transaction": { "description": "DURBAN HILTON — INDABA COFFEE CONFERENCE", "amount": -7800 },
+      "expected": { "primary": "6900", "acceptable": ["6160", "6900"] },
+      "rationale": "Conference attendance — could be Travel & Entertainment (6900) for the hotel/venue OR Training & Development (6160) for the conference itself. Both defensible."
+    },
+    {
+      "id": "ev-14",
+      "transaction": { "description": "SARS PENALTY — VAT 201 LATE FILING", "amount": -1200 },
+      "expected": { "primary": "6955", "acceptable": ["6955"] },
+      "rationale": "SARS penalty — Penalties & Fines, NON-VAT, non-deductible per Section 23(o). Prompt explicitly lists this pattern."
+    },
+    {
+      "id": "ev-15",
+      "transaction": { "description": "DONATION — KAROO HOSPICE NPO SECTION 18A", "amount": -5000 },
+      "expected": { "primary": "6965", "acceptable": ["6965"] },
+      "rationale": "Section 18A donation — Donations account, NON-VAT, deduction limited to 10% of taxable income."
+    },
+    {
+      "id": "ev-16",
+      "transaction": {
+        "description": "KAROO ENGINEERING — ESPRESSO ROASTER REPAIR",
+        "amount": -8400
+      },
+      "expected": { "primary": "6970", "acceptable": ["6970"] },
+      "rationale": "Equipment repair — Repairs & Maintenance."
+    },
+    {
+      "id": "ev-17",
+      "transaction": {
+        "description": "DISCOVERY HEALTH — STAFF MEDICAL AID MARCH",
+        "amount": -3200
+      },
+      "expected": { "primary": "6155", "acceptable": ["6155"] },
+      "rationale": "Discovery Health = medical aid — Employee Benefits & Medical Aid per prompt patterns."
+    },
+    {
+      "id": "ev-18",
+      "transaction": { "description": "CITY OF GEORGE — MUNICIPAL RATES Q1", "amount": -1850 },
+      "expected": { "primary": "6340", "acceptable": ["6340"] },
+      "rationale": "Municipal rates — 6340 (Rates), VAT-exempt. Prompt explicitly flags the 'city of'/'council' keyword pattern."
+    },
+    {
+      "id": "ev-19",
+      "transaction": { "description": "PNET — JOB ADVERT BARISTA POSITION", "amount": -1500 },
+      "expected": { "primary": "6170", "acceptable": ["6170"] },
+      "rationale": "PNet = recruitment platform — Recruitment Costs per prompt pattern."
+    },
+    {
+      "id": "ev-20",
+      "transaction": { "description": "POSTNET COURIER — INVOICE DOCUMENTS", "amount": -340 },
+      "expected": { "primary": "6940", "acceptable": ["6940"] },
+      "rationale": "PostNet courier — Courier & Postage. Prompt says prefer 6940 over 5500 for non-COGS courier."
+    },
+    {
+      "id": "ev-21",
+      "transaction": { "description": "ANTHROPIC API — CLAUDE USAGE MARCH", "amount": -2400 },
+      "expected": { "primary": "6850", "acceptable": ["6850"] },
+      "rationale": "Anthropic = AI software service — Software & Subscriptions per prompt example list."
+    },
+    {
+      "id": "ev-22",
+      "transaction": { "description": "PAYROLL MARCH 2026 — 4 EMPLOYEES", "amount": -68000 },
+      "expected": { "primary": "6110", "acceptable": ["6110"] },
+      "rationale": "Gross salaries payment — Gross Salaries account."
+    },
+    {
+      "id": "ev-23",
+      "transaction": {
+        "description": "ETHIOPIA COFFEE IMPORTERS — GREEN BEANS 80KG",
+        "amount": -15400
+      },
+      "expected": { "primary": "5300", "acceptable": ["5300", "1131"] },
+      "rationale": "Raw coffee inventory purchase — could go to Direct Materials (5300) as expense or Raw Materials (1131) as capitalised inventory. Both defensible without journal context."
+    },
+    {
+      "id": "ev-24",
+      "transaction": { "description": "EFT CR YOCO — CARD MACHINE SETTLEMENT", "amount": 4250 },
+      "expected": { "primary": "4110", "acceptable": ["4110", "4120"] },
+      "rationale": "Yoco settlement = customer card payment landing — Sales Revenue. Prompt explicitly notes Yoco fees should NOT auto-go to bank charges."
+    },
+    {
+      "id": "ev-25",
+      "transaction": { "description": "AVON CLEANING SERVICES — APRIL CONTRACT", "amount": -1800 },
+      "expected": { "primary": "6360", "acceptable": ["6360"] },
+      "rationale": "Cleaning services — Cleaning & Hygiene per prompt pattern."
+    }
+  ]
+}
