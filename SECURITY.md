@@ -6,7 +6,7 @@ If you believe you have found a security vulnerability in `agentic-bookkeeper`, 
 
 **Preferred channel:** GitHub Security Advisories — open a [private vulnerability report](https://github.com/ArnovHeerden/agentic-bookkeeper/security/advisories/new).
 
-**Alternative:** email arno.security@axiomatics.co.za with subject `[agentic-bookkeeper] security report`.
+**Alternative:** email arnovanheerden50@gmail.com with subject `[agentic-bookkeeper] security report`.
 
 You can expect:
 
