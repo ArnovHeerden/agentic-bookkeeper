@@ -11,6 +11,10 @@ updates:
     commit-message:
       prefix: chore
       include: scope
+    ignore:
+      # @eslint/js v10 requires eslint v10; pinned to v9 to track the eslint major.
+      - dependency-name: "@eslint/js"
+        update-types: ["version-update:semver-major"]
     groups:
       dev-dependencies:
         dependency-type: development
