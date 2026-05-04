@@ -59,7 +59,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.78.0",
+    "@anthropic-ai/sdk": "^0.92.0",
     "zod": "^4.0.0"
   },
   "devDependencies": {
